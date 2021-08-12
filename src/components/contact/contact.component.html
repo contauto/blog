@@ -1,1 +1,18 @@
 <app-pageTitle [title]="'İletişim'"></app-pageTitle>
+<form (ngsubmit)="(onsubmit)" [formGroup]="contactForm">
+  <div class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="isminiz" formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="email adresiniz" formControlName="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="konu" formControlName="subject">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea rows="5" matInput placeholder="mesajınız" formControlName="message"></textarea>
+    </mat-form-field>
+
+  </div>
+</form>
